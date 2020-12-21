@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Text;
 
 namespace Suls.Data
 {
@@ -16,7 +17,7 @@ namespace Suls.Data
 
         [Required]
         [MaxLength(20)]
-        public string Username { get; set; }
+        public string UserName { get; set; }
 
         [Required]
         public string Email { get; set; }

@@ -10,8 +10,8 @@ using Suls.Data;
 namespace Suls.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201015172259_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20201220130040_Init")]
+    partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -83,7 +83,7 @@ namespace Suls.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Username")
+                    b.Property<string>("UserName")
                         .IsRequired()
                         .HasColumnType("nvarchar(20)")
                         .HasMaxLength(20);

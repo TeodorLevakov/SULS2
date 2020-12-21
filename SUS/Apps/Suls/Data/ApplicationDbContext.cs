@@ -1,4 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace Suls.Data
 {
@@ -6,11 +9,13 @@ namespace Suls.Data
     {
         public ApplicationDbContext()
         {
+
         }
 
-        public ApplicationDbContext(DbContextOptions db)
+        public ApplicationDbContext(DbContextOptions db) 
             : base(db)
         {
+
         }
 
         public DbSet<User> Users { get; set; }
@@ -23,8 +28,9 @@ namespace Suls.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=.;Database=Suls;Integrated Security=True;");
+                optionsBuilder.UseSqlServer(@"Server=LAPTOP-0DIQUF6U\SQLEXPRESS;Database=Suls2;Integrated Security=True;");
             }
         }
+
     }
 }

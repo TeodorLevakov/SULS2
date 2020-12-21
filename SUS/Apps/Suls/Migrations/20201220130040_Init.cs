@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Suls.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class Init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -25,7 +25,7 @@ namespace Suls.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
-                    Username = table.Column<string>(maxLength: 20, nullable: false),
+                    UserName = table.Column<string>(maxLength: 20, nullable: false),
                     Email = table.Column<string>(nullable: false),
                     Password = table.Column<string>(nullable: false)
                 },
@@ -42,8 +42,8 @@ namespace Suls.Migrations
                     Code = table.Column<string>(maxLength: 800, nullable: false),
                     AchievedResult = table.Column<int>(nullable: false),
                     CreatedOn = table.Column<DateTime>(nullable: false),
-                    UserId = table.Column<string>(nullable: true),
-                    ProblemId = table.Column<string>(nullable: true)
+                    ProblemId = table.Column<string>(nullable: true),
+                    UserId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
